@@ -1,0 +1,58 @@
+.contCardTorneo {
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  .contInfo {
+    background-color: #303030;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h2 {
+      color: #6fffe9;
+      text-align: center;
+      font-size: 2em;
+      text-transform: capitalize;
+    }
+    h3 {
+      font-size: 1.5em;
+      color: rgb(255, 42, 120);
+      text-transform: capitalize;
+      span {
+        color: #6fffe9;
+        font-size: 1.5em;
+        margin-left: 20px;
+      }
+    }
+    .seccion {
+      display: flex;
+      justify-content: space-between;
+      h4 {
+        font-size: 1.3em;
+        font-family: sans-serif;
+        color: #d6d6d6;
+      }
+    }
+    a {
+      width: 200px;
+      .btnInscripcion {
+        width: 200px;
+        font-size: 1.2em;
+        padding: 5px 0px;
+        background-color: #23C186;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.5s ease all;
+        &:hover {
+          color: #000;
+          background-color: #fff;
+          box-shadow: 5px 5px 10px #000;
+          // border-color: #6fffe9;
+        }
+      }
+    }
+  }
+}

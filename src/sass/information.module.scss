@@ -1,0 +1,90 @@
+.contInformation {
+  width: 100%;
+  background-color: #070A0D;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .contCardInfo {
+    width: 50%;
+    min-width: 400px;
+    padding: 50px 20px;
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 30px;
+      border: 3px solid #5BC0BE;
+      position: relative;
+      border-radius: 20px;
+      font-size: 16px;
+      .title {
+        color: #6FFFE9;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 25px;
+        font-size: 1em;
+        color: #d4d4d4;
+      }
+      .btn {
+        width: 200px;
+        height: 40px;
+        position: absolute;
+        bottom: -20px;
+        right: 50%;
+        transform: translateX(50%);
+        background-color: #070A0D;
+        color: #6FFFE9;
+        transition: .5s ease all;
+        cursor: pointer;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        border: 2px solid #5BC0BE;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        &:hover {
+          color: #070A0D;
+          background-color: #5BC0BE;
+        }
+      }
+    }
+  }
+  .contImg {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contInformation {
+    width: 100vw;
+    padding: 50px 10px;
+    .contCardInfo {
+      width: 100%;
+      min-width: 0;
+      .card {
+        width: 100%;
+        padding: 30px 15px;
+        .title {
+          font-size: 2em;
+        }
+        .text {
+          font-size: .8em;
+        }
+      }
+    }
+    .contImg {
+      width: 100%;
+      .image {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@900&display=swap');
+
+.contFront {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 1)),
+    url(../imgs/front.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 100px;
+  min-height: 800px;
+  padding: 100px 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  .contInfo {
+    width: 600px;
+    height: 100%;
+    h1 {
+      font-size: 4em;
+      font-family: "Roboto", sans-serif;
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 10px;
+      line-height: 1.2em;
+      width: 500px;
+      color: #fff;
+      span {
+        color: #6FFFE9;
+      }
+    }
+    p {
+      width: 500px;
+      font-size: 1.5em;
+      color: #ededed;
+      margin-bottom: 20px;
+    }
+    .btnAction {
+      font-size: 2em;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      color: #070A0D;
+      background-color: #6FFFE9;
+      transition: .5s ease all;
+      cursor: pointer;
+      &:hover {
+        color: #6FFFE9;
+        background: none;
+        border: 2px solid #6FFFE9;
+      }
+    }
+  }
+  .onda {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 200px;
+    .ondaIcon {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .contFront {
+    margin-top: 80px;
+    padding: 80px 10px;
+    .contInfo {
+      h1 {
+        font-size: 3em;
+        text-align: center;
+        width: 100%;
+      }
+      p {
+        width: 100%;
+        font-size: 1em;
+      }
+      .btnAction {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

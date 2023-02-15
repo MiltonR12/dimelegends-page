@@ -1,0 +1,29 @@
+.contTorneoPage {
+  padding: 130px 30px 30px 30px;
+  background-color: #101010;
+  min-height: 100vh;
+  .title {
+    font-family: sans-serif;
+    letter-spacing: 30px;
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 30px;
+    user-select: none;
+  }
+  .contCards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contTorneoPage {
+    .title {
+      font-size: 8vw;
+      letter-spacing: 10px;
+    }
+  }
+}

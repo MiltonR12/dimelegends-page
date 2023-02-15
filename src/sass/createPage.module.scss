@@ -1,0 +1,23 @@
+.contCreatePage {
+  padding: 130px 30px 30px 30px;
+  background-color: #101010;
+  .title {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 8vw;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .contCreatePage {
+    .title {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contCreatePage {
+    padding: 90px 10px 10px 10px;
+  }
+}

@@ -1,0 +1,46 @@
+.contMenuUser {
+  width: 300px;
+  background-color: #202020;
+  margin: 30px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  .contUser {
+    padding: 20px;
+    h3 {
+      font-size: 2em;
+      text-align: center;
+      span {
+        color: #6FFFE3;
+      }
+    }
+  }
+  .contMenu {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0px;
+      li {
+        list-style: none;
+        .enlace {
+          color: #fff;
+          display: block;
+          font-size: 1.5em;
+          text-decoration: none;
+          padding: 5px 10px;
+          &:hover {
+            background-color: #303030;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contMenuUser {
+    margin: 0;
+  }
+}
