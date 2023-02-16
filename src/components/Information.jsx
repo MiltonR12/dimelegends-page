@@ -23,7 +23,9 @@ function Information() {
       <div className={estilos.contCardInfo} >
         <div className={estilos.card} data-aos="flip-up" >
           <h3 className={estilos.title} >Crea tu torneo</h3>
-          <p className={estilos.text} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos recusandae in eaque. Dignissimos ducimus incidunt sit corrupti praesentium a illo! Doloremque quisquam facere nihil beatae, facilis et sit tenetur!</p>
+          <p className={estilos.text} >
+            Crea tu torneo, es muy facil dale click en Crear Torneo y llena el formulario para lo cual tendras que crearte una cuenta en la plataforma.
+          </p>
           <Link to={user == '' ? `/login` : `/usuario/${user}/create`} className={estilos.btn} >
             Crear Torneo <AiOutlineStar />
           </Link>
@@ -32,7 +34,11 @@ function Information() {
       <div className={estilos.contCardInfo} >
         <div className={estilos.card} data-aos="flip-up" >
           <h3 className={estilos.title} >Crea tu evento</h3>
-          <p className={estilos.text} >Lorem ipsum dolor sit, amet consectetur adipisicing elit. A quia, perspiciatis illo consequuntur rerum voluptas. Repellat autem fugiat repellendus in a facere, voluptate deserunt, dolore eos nam iste, totam minus?</p>
+          <p className={estilos.text} >
+            Crea tu Evento, es muy facil dale click en Crear Evento y llena el formulario para lo cual tendras que crearte una cuenta en la plataforma.
+            <br />
+            Esta funcion no esta disponible por el momento.
+          </p>
           <Link to={user == '' ? `/login` : `/usuario/${user}/create`} className={estilos.btn} >
             Crear Evento <AiOutlineStar />
           </Link>

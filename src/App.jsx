@@ -12,11 +12,12 @@ import { useToken } from './state/authState.js'
 import { useGetTorneos } from './hooks/useTorneos.js'
 import { useEffect } from "react";
 import { useStateTorneo } from './state/authState.js'
+import RechargePage from "./pages/RechargePage";
 
 function App() {
 
   const { isAuth } = useToken()
-  const { data } = useGetTorneos()
+  const { data, isLoading } = useGetTorneos()
   const { setLista } = useStateTorneo()
 
   useEffect(() => {
@@ -29,8 +30,9 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path='/login' element={<LoginPage />} />
-        <Route path='/torneos' element={<TorneoPage />} />
+        <Route path='/torneos' element={<TorneoPage isLoading={isLoading} />} />
         <Route path='/eventos' element={<EventPage />} />
+        <Route path='/recargas' element={<RechargePage />} />
         <Route element={<RouterProtected isAllowed={isAuth} />} >
           <Route path='/usuario/:name/create' element={<CreatePage />} />
           <Route path='/usuario/:name/update/:id' element={<CreatePage />} />
