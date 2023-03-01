@@ -18,7 +18,7 @@
     }
     h3 {
       font-size: 1.5em;
-      color: rgb(255, 42, 120);
+      color: #ff2a78;
       text-transform: capitalize;
       span {
         color: #6fffe9;
@@ -35,23 +35,19 @@
         color: #d6d6d6;
       }
     }
-    a {
-      width: 200px;
-      .btnInscripcion {
-        width: 200px;
-        font-size: 1.2em;
-        padding: 5px 0px;
-        background-color: #23C186;
-        color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.5s ease all;
-        &:hover {
-          color: #000;
-          background-color: #fff;
-          box-shadow: 5px 5px 10px #000;
-          // border-color: #6fffe9;
-        }
+    .btnInscripcion {
+      font-size: 1.2em;
+      padding: 5px 10px;
+      border: 2px solid #6fffe9;
+      color: #6fffe9;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s ease all;
+      text-decoration: none;
+      text-align: center;
+      &:hover {
+        background-color: #6fffe9;
+        color: #000;
       }
     }
   }

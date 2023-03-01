@@ -13,6 +13,7 @@ import { useGetTorneos } from './hooks/useTorneos.js'
 import { useEffect } from "react";
 import { useStateTorneo } from './state/authState.js'
 import RechargePage from "./pages/RechargePage";
+import CopaPage from "./pages/CopaPage";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/torneos' element={<TorneoPage isLoading={isLoading} />} />
+        <Route path='/torneos/:id' element={<CopaPage torneos={data} />} />
         <Route path='/eventos' element={<EventPage />} />
         <Route path='/recargas' element={<RechargePage />} />
         <Route element={<RouterProtected isAllowed={isAuth} />} >

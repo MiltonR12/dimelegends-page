@@ -1,10 +1,11 @@
 import estilos from '../sass/cardCreate.module.scss'
-import { set, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { useCreateTorneo, useUpdateTorneo } from '../hooks/useTorneos'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useStateUserTorneo } from "../state/authState.js";
 import { useEffect } from 'react'
+import { useToken } from '../state/authState.js'
 
 function CardCreate() {
 
@@ -14,12 +15,12 @@ function CardCreate() {
   const navigate = useNavigate()
   const params = useParams()
   const { lista } = useStateUserTorneo()
+  const { user } = useToken()
 
   useEffect(() => {
     const inicio = () => {
       const [torneo] = lista.filter(item => item.id == params.id)
       setValue('name', torneo.name)
-      setValue('organizer', torneo.organizer)
       setValue('award', torneo.award)
       setValue('cost', torneo.cost)
       setValue('date', torneo.date)
@@ -36,9 +37,9 @@ function CardCreate() {
 
   const onSubmit = (date) => {
     if (params.id) {
-      updateTorneo({id: params.id, ...date})
+      updateTorneo({id: params.id, ...date, organizer: user})
     } else {
-      createTorneo(date)
+      createTorneo({...date, organizer: user})
     }
     navigate('/torneos')
   }
@@ -48,10 +49,6 @@ function CardCreate() {
       <div className={estilos.seccion} >
         <label htmlFor="">Nombre del Torneo</label>
         <input type="text" {...register('name')} required />
-      </div>
-      <div className={estilos.seccion} >
-        <label htmlFor="">Organizador</label>
-        <input type="text" {...register('organizer')} required />
       </div>
       <div className={estilos.seccion} >
         <label htmlFor="">Premio</label>

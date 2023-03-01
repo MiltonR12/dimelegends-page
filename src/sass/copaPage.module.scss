@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+.contCopaPage {
+  padding: 120px 20px 20px 20px;
+  min-height: 100vh;
+  background-color: #101010;
+  .contCardCopa {
+    padding: 10px;
+    border: 1px solid #6fffe9;
+    box-shadow: 0px 0px 30px #6fffe9;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    .title {
+      text-align: center;
+      font-size: 4em;
+      font-family: "Patua One", cursive;
+      letter-spacing: 10px;
+    }
+    .subTitle {
+      color: #6fffe9;
+    }
+    h3 {
+      color: #dadada;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+    ul {
+      margin-bottom: 10px;
+      margin-left: 20px;
+      li {
+        list-style: none;
+      }
+    }
+    .contBtn {
+      display: flex;
+      gap: 20px;
+      a {
+        width: 50%;
+        button {
+          width: 100%;
+          padding: 5px 0px;
+          background-color: #6fffe9;
+          border: 1px solid #6fffe9;
+          color: #000;
+          font-size: 1.5em;
+          transition: .5s ease all;
+          &:hover {
+            background: none;
+            color: #6fffe9;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .contCopaPage {
+    padding: 90px 10px 10px 10px;
+    .contCardCopa {
+      .title {
+        font-size: 8vw;
+      }
+      h3 {
+        margin-left: 10px;
+      }
+      ul {
+        margin-left: 10px;
+        margin-bottom: 20px;
+      }
+      .contBtn {
+        flex-direction: column;
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
