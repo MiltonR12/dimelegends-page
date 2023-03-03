@@ -18,6 +18,7 @@ function CardForm() {
     if (login) {
       send({
         ...data,
+        redes: '',
         code: parseInt(Math.random() * 10000)
       }, {
         onSuccess: ({ token, user }) => {
@@ -61,23 +62,18 @@ function CardForm() {
             type="email"
             required
             pattern='^[^@]+@[^@]+\.[a-zA-Z]{2,}$'
-            {...register('email')} />
+            {...register('email', {
+              minLength: 11
+            })} />
         </div>
         <div className={estilos.seccion} >
           <label htmlFor="">Password</label>
           <input
             required
-            type="password" {...register('password')} />
+            type="password" {...register('password', {
+              minLength: 6
+            })} />
         </div>
-        {
-          login ? (
-            <div className={estilos.seccion} >
-              <label htmlFor="">Pagina</label>
-              <input
-                type="text" {...register('redes')} />
-            </div>
-          ) : undefined
-        }
         {
           isError && !login ? <small className={estilos.messageError} >Contraseña o Correo incorrecto</small> : undefined
         }
