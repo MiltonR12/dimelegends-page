@@ -15,12 +15,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
       font-family: "Poppins", sans-serif;
       .title {
-        text-transform: uppercase;
-        text-align: center;
         width: 100%;
+        text-align: center;
         font-size: 3em;
       }
       label {
@@ -62,14 +60,12 @@
     }
   }
   .btnCambio {
-    width: 100%;
-    max-width: 200px;
     background: none;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
     margin-top: 50px;
-    border: none;
+    transition: .5s ease all;
     &:hover {
       color: #6fffe9;
     }

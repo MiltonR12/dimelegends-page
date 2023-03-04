@@ -42,7 +42,7 @@ function CardForm() {
       <form onSubmit={handleSubmit(onSubmit)} >
         <div className={estilos.seccion} >
           <h2 className={estilos.title} >
-            {login ? 'Crear Cuenta' : 'Iniciar Session'}
+            {login ? 'CREAR CUENTA' : 'INICIAR SESION'}
           </h2>
         </div>
         {

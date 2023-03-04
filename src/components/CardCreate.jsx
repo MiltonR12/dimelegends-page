@@ -32,6 +32,8 @@ function CardCreate() {
     }
     if (params.id) {
       inicio()
+    } else {
+      setValue('award', 'GRATUITO')
     }
   }, [])
 

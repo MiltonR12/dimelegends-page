@@ -1,6 +1,6 @@
 import estilos from '../sass/information.module.scss'
 import { AiOutlineStar } from 'react-icons/ai'
-import copa from '../imgs/copaTorneo.png'
+import copa from '../imgs/copa.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'

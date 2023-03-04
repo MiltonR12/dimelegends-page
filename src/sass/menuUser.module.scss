@@ -2,7 +2,6 @@
   width: 300px;
   background-color: #202020;
   margin: 30px;
-  overflow: hidden;
   position: absolute;
   right: 0;
   z-index: 10;
@@ -34,6 +33,11 @@
             background-color: #303030;
           }
         }
+        &:last-child {
+          .enlace {
+            color: #ff0000;
+          }
+        }
       }
     }
   }
@@ -41,6 +45,6 @@
 
 @media screen and (max-width: 500px) {
   .contMenuUser {
-    margin: 0;
+    margin: 10px;
   }
 }
