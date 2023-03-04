@@ -46,15 +46,10 @@ function CardForm() {
           </h2>
         </div>
         {
-          login ? (
-            <div className={estilos.seccion} >
-              <label htmlFor="">Nombre</label>
-              <input
-                type="text" {...register('name')}
-                required
-              />
-            </div>
-          ) : undefined
+          login && <div className={estilos.seccion} >
+            <label htmlFor="">Nombre</label>
+            <input type="text" {...register('name')} required />
+          </div>
         }
         <div className={estilos.seccion} >
           <label htmlFor="">Email</label>
@@ -75,7 +70,7 @@ function CardForm() {
             })} />
         </div>
         {
-          isError && !login ? <small className={estilos.messageError} >Contraseña o Correo incorrecto</small> : undefined
+          isError && !login && <small className={estilos.messageError} >Contraseña o Correo incorrecto</small>
         }
         <button className={estilos.btnEnviar} >
           {login ? 'Crear Cuenta' : 'Iniciar Session'}

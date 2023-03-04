@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import { useStateUserTorneo } from "../state/authState.js";
 import { useEffect } from 'react'
 import { useToken } from '../state/authState.js'
+import { DateTime } from 'luxon'
 
 function CardCreate() {
 
