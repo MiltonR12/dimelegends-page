@@ -33,7 +33,7 @@ function PiePaga() {
       <div className={estilos.contForm} >
         <form action="">
           <label htmlFor="">Contacto</label>
-          <textarea name="" rows="10" placeholder='Message' ></textarea>
+          <textarea name="" rows="5" placeholder='Message' ></textarea>
           <button>Enviar</button>
         </form>
       </div>
