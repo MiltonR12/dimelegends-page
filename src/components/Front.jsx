@@ -11,7 +11,7 @@ function Front() {
       <div className={estilos.contInfo} >
         <h1>DEMUESTRA QUIEN ES EL MEJOR <span>GAMER</span></h1>
         <p className={estilos.contDescription} >
-          Participa en los torneos que estan aqui para que puedas mejorar como jugador y ganar muchos premios por parte de los creadores.
+          ¡Únete a la competición y conviértete en el campeón del juego!
         </p>
         <button className={estilos.btnAction} onClick={e => navigate('/torneos')} >Participar</button>
       </div>

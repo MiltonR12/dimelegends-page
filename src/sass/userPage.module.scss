@@ -1,4 +1,49 @@
 .contUserPage {
-  margin-top: 100px;
-  display: flex;
+  background-color: #303030;
+  min-height: 100vh;
+  padding: 120px 20px 20px 20px;
+  position: relative;
+  .contDeleteUser {
+    input {
+      background-color: #101010;
+      padding: 5px 10px;
+      color: #fff;
+      outline: none;
+      border: none;
+    }
+    .btnDelete {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+  .cuadroFlotante {
+    width: 320px;
+    background-color: #101010;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    h4 {
+      text-align: center;
+      padding: 10px 0px;
+      color: #ff0000;
+      font-size: 1.5rem;
+    }
+    .btn {
+      width: 50%;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      padding: 5px 0px;
+      background-color: #101010;
+      color: #fff;
+      cursor: pointer;
+      &:last-child {
+        color: #ff0000;
+      }
+    }
+  }
 }

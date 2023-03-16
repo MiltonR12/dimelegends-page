@@ -1,5 +1,6 @@
 import { useMutation, useQuery } from 'react-query'
 import { createUsuario, getUsers, loginRequest } from '../api/auth.js'
+import { deleteUser } from '../api/user.js'
 
 export const useGetUsers = () => {
   return useQuery({
@@ -19,3 +20,9 @@ export const useLoginRequest = () => {
     mutationFn: loginRequest
   })
 }
+
+export const useDeleteUser = () => (
+  useMutation({
+    mutationFn: deleteUser
+  })
+)
