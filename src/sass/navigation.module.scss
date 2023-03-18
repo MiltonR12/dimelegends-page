@@ -62,8 +62,7 @@
   .contUser {
     .login {
       @include boton();
-      width: auto;
-      padding: 10px 20px;
+      padding: 10px;
     }
     .btnUser {
       width: 50px;
@@ -99,6 +98,7 @@
   .contNavigation {
     .contTitle {
       display: none;
+      cursor: pointer;
     }
   }
 }

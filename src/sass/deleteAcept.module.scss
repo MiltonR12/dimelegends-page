@@ -1,0 +1,32 @@
+.cuadroFlotante {
+  width: 320px;
+  background-color: #303030;
+  box-shadow: 3px 3px 10px #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  h4 {
+    text-align: center;
+    padding: 10px 0px;
+    color: #ff0000;
+    font-size: 1.5rem;
+  }
+  .btn {
+    width: 50%;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    padding: 5px 0px;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s ease all;
+    &:last-child {
+      color: #ff0000;
+    }
+    &:hover {
+      background-color: #101010;
+    }
+  }
+}

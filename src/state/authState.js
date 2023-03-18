@@ -16,6 +16,9 @@ export const useToken = create(
         token: '',
         isAuth: false,
         user: ''
+      })),
+      setName: (name) => set(state => ({
+        user: name.trim()
       }))
     }),
     {

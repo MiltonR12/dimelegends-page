@@ -1,0 +1,20 @@
+@mixin pencil() {
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+}
+
+.pencil {
+  @include pencil();
+}
+.pencilBien {
+  color: green;
+  @include pencil();
+}
+
+@media screen and (max-width: 480px) {
+  .pencil, .pencilBien {
+    font-size: 32px;
+  }
+}

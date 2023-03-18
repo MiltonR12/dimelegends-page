@@ -1,39 +1,48 @@
 import estilos from '../sass/userPage.module.scss'
 import { useToken } from '../state/authState.js'
 import { useState } from 'react'
-import { useDeleteUser } from '../hooks/useUsers.js'
+import { updateNameUser } from '../hooks/useUsers.js'
+import Pencil from '../components/Pencil'
+import DeleteAcept from '../components/DeleteAcept'
 
 function UserPage() {
 
-  const { user, reiniciar } = useToken()
-  const { mutate: deleteUser } = useDeleteUser()
+  const { user, reiniciar, setName } = useToken()
+  const { mutate: updateUser } = updateNameUser()
   const [open, setOpen] = useState(false)
+  const [openUser, setOpenUser] = useState(true)
 
-  const handleClick = () => {
-    deleteUser(user, {
+  const changeName = () => {
+    const name = document.getElementById('name').value
+    updateUser(name.trim() , {
       onSuccess: () => {
-        reiniciar()
+        setName(name)
       }
     })
   }
 
-  const contAcept = () => {
-    return <div className={estilos.cuadroFlotante} >
-      <h4>¿Estas Seguro?</h4>
-      <button className={estilos.btn} onClick={e => setOpen(false)} >Cancelar</button>
-      <button className={estilos.btn} onClick={handleClick} >Eliminar Cuenta</button>
-    </div>
-  }
-
   return (
     <main className={estilos.contUserPage} >
-      <div>
-        <h1>Hola <span>{user}</span> !</h1>
+      <div className={estilos.contNameUser} >
+        <div className={estilos.contIconUser} >
+          <h2>{user.charAt(0)}</h2>
+        </div>
+        <div className={estilos.contName} >
+          <input
+            type="text"
+            defaultValue={user}
+            disabled={openUser} id='name'
+            className={estilos.contText}
+          />
+          <Pencil openUser={openUser} setOpenUser={setOpenUser} action={changeName} />
+        </div>
       </div>
       <div className={estilos.contDeleteUser} >
-        <button onClick={e => setOpen(!open)} className={estilos.btnDelete} >Eliminar Cuenta</button>
-        {open && contAcept()}
+        <button onClick={() => setOpen(!open)} className={estilos.btnDelete} >
+          Eliminar Cuenta
+        </button>
       </div>
+      {open && <DeleteAcept user={user} setOpen={setOpen} reiniciar={reiniciar} />}
     </main>
   )
 }

@@ -1,8 +1,41 @@
+
 .contUserPage {
-  background-color: #303030;
+  background-color: #101010;
   min-height: 100vh;
   padding: 120px 20px 20px 20px;
   position: relative;
+  .contNameUser {
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .contIconUser {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(146, 0, 107);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 4rem;
+      }
+    }
+    .contName {
+      .contText {
+        width: 300px;
+        font-size: 2rem;
+        background: none;
+        color: #fff;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #fff;
+      }
+      .contText:disabled {
+        border: none;
+      }
+    }
+  }
   .contDeleteUser {
     input {
       background-color: #101010;
@@ -19,30 +52,22 @@
       cursor: pointer;
     }
   }
-  .cuadroFlotante {
-    width: 320px;
-    background-color: #101010;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    h4 {
-      text-align: center;
-      padding: 10px 0px;
-      color: #ff0000;
-      font-size: 1.5rem;
-    }
-    .btn {
-      width: 50%;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      padding: 5px 0px;
-      background-color: #101010;
-      color: #fff;
-      cursor: pointer;
-      &:last-child {
-        color: #ff0000;
+}
+
+@media screen and (max-width: 480px) {
+  .contUserPage {
+    .contNameUser {
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 2px solid #303030;
+      padding-bottom: 30px;
+      .contName {
+        width: 100%;
+        display: flex;
+        .contText {
+          width: 90%;
+          font-size: 1.3rem;
+        }
       }
     }
   }

@@ -16,32 +16,36 @@ function Navigation() {
     setOpen(!open)
   }
 
+  const menuActivo = (isActive) => {
+    return isActive ? estilos.activo : estilos.desactivado
+  }
+
   return (
     <header className={estilos.contNavigation} >
-      <nav className={open ? `${estilos.contMenu} ${estilos.open}` : `${estilos.contMenu}`} >
+      <nav className={`${estilos.contMenu} ${open && estilos.open }`} >
         <ul>
           <li>
             <NavLink
               onClick={handleClick}
-              className={({ isActive }) => (isActive ? estilos.activo : estilos.desactivado)}
+              className={({ isActive }) => menuActivo(isActive)}
               to='/' >Home</NavLink>
           </li>
           <li>
             <NavLink
               onClick={handleClick}
-              className={({ isActive }) => (isActive ? estilos.activo : estilos.desactivado)}
+              className={({ isActive }) => menuActivo(isActive)}
               to='/torneos' >Torneos</NavLink>
           </li>
           <li>
             <NavLink
               onClick={handleClick}
-              className={({ isActive }) => (isActive ? estilos.activo : estilos.desactivado)}
+              className={({ isActive }) => menuActivo(isActive)}
               to='/eventos' >Eventos</NavLink>
           </li>
           <li>
             <NavLink
               onClick={handleClick}
-              className={({ isActive }) => (isActive ? estilos.activo : estilos.desactivado)}
+              className={({ isActive }) => menuActivo(isActive)}
               to='/recargas' >Recargas</NavLink>
           </li>
         </ul>
@@ -50,16 +54,21 @@ function Navigation() {
         <AiOutlineMenu className={estilos.menuIcon} onClick={handleClick} />
         <h1>DIME LEGENDS</h1>
       </div>
-      {isAuth ? <div className={estilos.contUser} >
-        <button
-          className={estilos.btnUser}
-          onClick={() => setOpenUser(!openUser)} > {user.charAt(0).toUpperCase()} </button>
-        {openUser ? <MenuUser setOpenUser={setOpenUser} /> : undefined}
-      </div> : <div className={estilos.contUser} >
-        <Link to='/login' className={estilos.login} >
-          Entrar <AiOutlineUser />
-        </Link>
-      </div>}
+      {
+        isAuth ?
+          <div className={estilos.contUser} >
+            <button className={estilos.btnUser} onClick={() => setOpenUser(!openUser)} >
+              {user.charAt(0).toUpperCase()}
+            </button>
+            {openUser && <MenuUser setOpenUser={setOpenUser} />}
+          </div>
+          :
+          <div className={estilos.contUser} >
+            <Link to='/login' className={estilos.login} >
+              Entrar <AiOutlineUser />
+            </Link>
+          </div>
+      }
     </header>
   )
 }
